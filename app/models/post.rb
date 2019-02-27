@@ -7,5 +7,11 @@ class Post < ActiveRecord::Base
   validates :summary, length: { maximum: 250}
   #Post category is either fiction or non-fiction
   validates :category, inclusion: { in: %w(Fiction Non-fiction)}
-  #validates :title, inclusion: { if: }
+  validate :clickbait? 
+
+  def clickbait? 
+    if self.title && !self.title.match(/Won't Believe|Secret|Top [\d*]|Guess/)
+    errors.add(:clickbait, "is not enticing enough")
+  end
+end
 end
