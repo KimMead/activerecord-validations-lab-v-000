@@ -8,5 +8,4 @@ class Post < ActiveRecord::Base
   #Post category is either fiction or non-fiction
   validates :category, inclusion: { in: %w(Fiction Non-fiction)}
   validates :title, inclusion: { if: }
-    #in: %w("won't beleive", "secret", "top[number]", "guess" )}
 end
