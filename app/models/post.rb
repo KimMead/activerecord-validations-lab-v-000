@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   #post summary is maximum of 250 characters
   validates :summary, length: { maximum: 250}
   #Post category is either fiction or non-fiction
-  validates :category, inclusion: { in: %w(Fiction Non-fiction), message: "{value} is not a valid size" }
+  validates :category, inclusion: { in: %w(Fiction Non-fiction)}
   validates :title, inclusion: { if: }
     #in: %w("won't beleive", "secret", "top[number]", "guess" )}
 end
