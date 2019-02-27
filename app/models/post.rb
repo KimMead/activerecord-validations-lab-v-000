@@ -7,5 +7,5 @@ class Post < ActiveRecord::Base
   validates :summary, length: { maximum: 250}
   #Post category is either fiction or non-fiction
   validates :category, inclusion: { in: %w(Fiction Non-fiction)}
-  validates :title, inclusion: { if: }
+  #validates :title, inclusion: { if: }
 end
