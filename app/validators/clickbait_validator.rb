@@ -3,8 +3,8 @@ class ClickbaitValidator < ActiveModel::Validator
         record.title.split.any? do |word|
             word.include? "Won't Believe"
             word.include? "Secret"
-            word.include? "Guess" 
+            word.include? "Guess"
             word.include? "Top"
-        end        
+        end
     end
 end
