@@ -5,5 +5,4 @@ class Author < ActiveRecord::Base
   validates_uniqueness :name
   #Author phone number are 10 digits
   validates :phone_number, length: {is: 10}
-
 end
